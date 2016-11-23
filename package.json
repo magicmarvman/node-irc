@@ -33,7 +33,7 @@
   "license": "GPL-3.0",
   "dependencies": {
     "irc-colors": "^1.1.0",
-    "lodash": "^4.16.4"
+    "lodash": "^4.17.2"
   },
   "optionalDependencies": {
     "iconv": "^2.2.1",
@@ -43,6 +43,6 @@
     "ansi-color": "^0.2.1",
     "faucet": "^0.0.1",
     "jscs": "^3.0.7",
-    "tape": "^4.6.2"
+    "tape": "^4.6.3"
   }
 }
