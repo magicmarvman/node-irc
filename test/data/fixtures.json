@@ -3,7 +3,7 @@
 		"sent": [
 			["NICK testbot", "Client sent NICK message"],
 			["USER nodebot 8 * :nodeJS IRC client", "Client sent USER message"],
-			["QUIT :node-irc says goodbye", "Client sent QUIT message"]
+			["QUIT :MrNodeBot says goodbye", "Client sent QUIT message"]
 		],
 
 		"received": [
@@ -14,7 +14,7 @@
 		"sent": [
 			["NICK testbot", "Client sent NICK message"],
 			["USER nodebot 8 * :nodeJS IRC client", "Client sent USER message"],
-			["QUIT :node-irc says goodbye", "Client sent QUIT message"]
+			["QUIT :MrNodeBot says goodbye", "Client sent QUIT message"]
 		],
 
 		"received": [
@@ -168,7 +168,7 @@
 			["NICK testbot", "Client sent NICK message"],
 			["USER nodebot 8 * :nodeJS IRC client", "Client sent USER message"],
 			["NICK testbot1", "Client sent proper response to 433 nickname in use message"],
-			["QUIT :node-irc says goodbye", "Client sent QUIT message"]
+			["QUIT :MrNodeBot says goodbye", "Client sent QUIT message"]
 		],
 
 		"received": [
