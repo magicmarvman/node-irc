@@ -6,7 +6,7 @@ var color = require('ansi-color').set;
 
 var c = new irc.Client(
     'irc.dollyfish.net.nz',
-    'nodebot',
+    'MrNodeBot',
     {
         channels: ['#test'],
         //debug: true

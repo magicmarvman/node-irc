@@ -14,7 +14,7 @@ var options = {
 // Or to just use defaults
 var options = true;
 
-var bot = new irc.Client('chat.us.freenode.net', 'nodebot', {
+var bot = new irc.Client('chat.us.freenode.net', 'MrNodeBot', {
 	port: 6697,
     debug: true,
 	secure: options,

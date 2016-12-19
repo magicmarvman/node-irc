@@ -2,7 +2,7 @@
 	"basic": {
 		"sent": [
 			["NICK testbot", "Client sent NICK message"],
-			["USER nodebot 8 * :nodeJS IRC client", "Client sent USER message"],
+			["USER MrNodeBot 8 * :MrNodeBot IRC Bot", "Client sent USER message"],
 			["QUIT :MrNodeBot says goodbye", "Client sent QUIT message"]
 		],
 
@@ -13,7 +13,7 @@
 	"double-CRLF": {
 		"sent": [
 			["NICK testbot", "Client sent NICK message"],
-			["USER nodebot 8 * :nodeJS IRC client", "Client sent USER message"],
+			["USER MrNodeBot 8 * :MrNodeBot IRC Bot", "Client sent USER message"],
 			["QUIT :MrNodeBot says goodbye", "Client sent QUIT message"]
 		],
 
@@ -22,18 +22,18 @@
 		]
 	},
 	"parse-line": {
-		":irc.dollyfish.net.nz 372 nodebot :The message of the day was last changed: 2012-6-16 23:57": {
-            "raw": ":irc.dollyfish.net.nz 372 nodebot :The message of the day was last changed: 2012-6-16 23:57",
+		":irc.dollyfish.net.nz 372 MrNodeBot :The message of the day was last changed: 2012-6-16 23:57": {
+            "raw": ":irc.dollyfish.net.nz 372 MrNodeBot :The message of the day was last changed: 2012-6-16 23:57",
             "tags": {},
             "prefix": "irc.dollyfish.net.nz",
             "command": "rpl_motd",
             "server": "irc.dollyfish.net.nz",
             "rawCommand": "372",
             "commandType": "reply",
-            "args": ["nodebot", "The message of the day was last changed: 2012-6-16 23:57"]
+            "args": ["MrNodeBot", "The message of the day was last changed: 2012-6-16 23:57"]
 		},
-		":Ned!~martyn@irc.dollyfish.net.nz PRIVMSG #test :Hello nodebot!": {
-            "raw": ":Ned!~martyn@irc.dollyfish.net.nz PRIVMSG #test :Hello nodebot!",
+		":Ned!~martyn@irc.dollyfish.net.nz PRIVMSG #test :Hello MrNodeBot!": {
+            "raw": ":Ned!~martyn@irc.dollyfish.net.nz PRIVMSG #test :Hello MrNodeBot!",
             "tags": {},
 			"prefix": "Ned!~martyn@irc.dollyfish.net.nz",
             "command": "PRIVMSG",
@@ -42,7 +42,7 @@
 			"host": "irc.dollyfish.net.nz",
 			"rawCommand": "PRIVMSG",
 			"commandType": "normal",
-			"args": ["#test", "Hello nodebot!"]
+			"args": ["#test", "Hello MrNodeBot!"]
 		},
 		":Ned!~martyn@irc.dollyfish.net.nz PRIVMSG #test ::-)": {
             "raw": ":Ned!~martyn@irc.dollyfish.net.nz PRIVMSG #test ::-)",
@@ -151,22 +151,22 @@
 			"args": ["#channel", "\u000314,01\u001fwe can leave styles and colors alone if desired\u001f\u0003"],
 			"stripColors": false
 		},
-		":pratchett.freenode.net 324 nodebot #ubuntu +CLcntjf 5:10 #ubuntu-unregged": {
-            "raw": ":pratchett.freenode.net 324 nodebot #ubuntu +CLcntjf 5:10 #ubuntu-unregged",
+		":pratchett.freenode.net 324 MrNodeBot #ubuntu +CLcntjf 5:10 #ubuntu-unregged": {
+            "raw": ":pratchett.freenode.net 324 MrNodeBot #ubuntu +CLcntjf 5:10 #ubuntu-unregged",
             "tags": {},
 			"prefix": "pratchett.freenode.net",
             "command": "rpl_channelmodeis",
 			"server": "pratchett.freenode.net",
 			"rawCommand": "324",
 			"commandType": "reply",
-			"args": ["nodebot", "#ubuntu", "+CLcntjf", "5:10", "#ubuntu-unregged"]
+			"args": ["MrNodeBot", "#ubuntu", "+CLcntjf", "5:10", "#ubuntu-unregged"]
 		}
 
 	},
 	"433-before-001": {
 		"sent": [
 			["NICK testbot", "Client sent NICK message"],
-			["USER nodebot 8 * :nodeJS IRC client", "Client sent USER message"],
+			["USER MrNodeBot 8 * :MrNodeBot IRC Bot", "Client sent USER message"],
 			["NICK testbot1", "Client sent proper response to 433 nickname in use message"],
 			["QUIT :MrNodeBot says goodbye", "Client sent QUIT message"]
 		],

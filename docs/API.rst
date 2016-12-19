@@ -16,8 +16,8 @@ Client
     values::
 
         {
-            userName: 'nodebot',
-            realName: 'nodeJS IRC client',
+            userName: 'MrNodeBot',
+            realName: 'MrNodeBot IRC Bot',
             port: 6667,
             localAddress: null,
             localPort: null,
@@ -46,7 +46,7 @@ Client
     If you set `certExpired` to true, the bot connects even if the ssl cert has expired.
 
     `localAddress` is the local address to bind to when connecting, such as `127.0.0.1`
-    
+
     `localPort` is the local port to bind when connecting, such as `50555`
 
     `floodProtection` queues all your messages and slowly unpacks it to make sure

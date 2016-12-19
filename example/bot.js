@@ -2,7 +2,7 @@
 
 var irc = require('../');
 
-var bot = new irc.Client('irc.dollyfish.net.nz', 'nodebot', {
+var bot = new irc.Client('irc.dollyfish.net.nz', 'MrNodeBot', {
     debug: true,
     channels: ['#test', '#othertest']
 });
