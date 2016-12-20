@@ -1,13 +1,14 @@
 {
-  "name": "irc",
-  "description": "An IRC client library for node",
-  "version": "0.7.0",
-  "author": "Martyn Smith <martyn@dollyfish.net.nz>",
+  "name": "funsocietyirc-client",
+  "description": "An ehanced IRC client library for node",
+  "version": "0.0.1",
+  "author": "Dave Richer <dave@develops.io>",
   "scripts": {
     "test": "./node_modules/faucet/bin/cmd.js test/test-*.js",
     "lint": "./node_modules/jscs/bin/jscs --preset=airbnb */*.js"
   },
   "contributors": [
+    "Martyn Smith <martyn@dollyfish.net.nz>",
     "Fionn Kelleher <me@fionn.co>",
     "xAndy <xandy@hackerspace-bamberg.de>",
     "Mischa Spiegelmock <revmischa@cpan.org>",
@@ -16,16 +17,15 @@
     "Henri Niemeläinen <aivot-on@iki.fi>",
     "Alex Miles <ghostaldev@gmail.com>",
     "Simmo Saan <simmo.saan@gmail.com>",
-    "Blay <blay09@hotmail.de>",
-    "Dave Richer <dave@develops.io>"
+    "Blay <blay09@hotmail.de>"
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/martynsmith/node-irc"
+    "url": "https://github.com/funsocietyirc/node-irc"
   },
   "bugs": {
-    "mail": "martyn@dollyfish.net.nz",
-    "url": "http://github.com/martynsmith/node-irc/issues"
+    "mail": "dave@develops.io",
+    "url": "https://github.com/funsocietyirc/node-irc/issues"
   },
   "main": "lib/irc",
   "engines": {
