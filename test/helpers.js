@@ -29,7 +29,9 @@ var MockIrcd = function(port, encoding, isSecure) {
 
     this.server = connectionClass.createServer(options, function(c) {
         c.on('data', function(data) {
-            var msg = data.toString(self.encoding).split('\r\n').filter(function(m) { return m; });
+            var msg = data.toString(self.encoding).split('\r\n').filter(function(m) {
+                return m;
+            });
             self.incoming = self.incoming.concat(msg);
         });
 

@@ -1,3 +1,5 @@
+'use strict';
+
 var irc = require('../lib/irc');
 var test = require('tape');
 
@@ -7,7 +9,9 @@ test('connect and sets hostmask when nick in use', function(t) {
     var client, mock, expected;
 
     mock = testHelpers.MockIrcd();
-    client = new irc.Client('localhost', 'testbot', {debug: true});
+    client = new irc.Client('localhost', 'testbot', {
+        debug: true
+    });
 
     expected = testHelpers.getFixtures('433-before-001');
 

@@ -1,3 +1,5 @@
+'use strict';
+
 var net = require('net');
 
 var irc = require('../lib/irc');
@@ -7,7 +9,9 @@ var testHelpers = require('./helpers');
 
 test('sent messages ending with double CRLF', function(t) {
     var mock = testHelpers.MockIrcd();
-    var client = new irc.Client('localhost', 'testbot', { debug: true});
+    var client = new irc.Client('localhost', 'testbot', {
+        debug: true
+    });
 
     var expected = testHelpers.getFixtures('double-CRLF');
 

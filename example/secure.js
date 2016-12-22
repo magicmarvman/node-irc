@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+'use strict';
 
 var irc = require('../');
 /*
@@ -15,9 +16,9 @@ var options = {
 var options = true;
 
 var bot = new irc.Client('chat.us.freenode.net', 'MrNodeBot', {
-	port: 6697,
+    port: 6697,
     debug: true,
-	secure: options,
+    secure: options,
     channels: ['#botwar']
 });
 
@@ -38,13 +39,20 @@ bot.addListener('message', function(from, to, message) {
             bot.say(to, 'Hello there ' + from);
         }
         if (message.match(/dance/)) {
-            setTimeout(function() { bot.say(to, '\u0001ACTION dances: :D\\-<\u0001'); }, 1000);
-            setTimeout(function() { bot.say(to, '\u0001ACTION dances: :D|-<\u0001');  }, 2000);
-            setTimeout(function() { bot.say(to, '\u0001ACTION dances: :D/-<\u0001');  }, 3000);
-            setTimeout(function() { bot.say(to, '\u0001ACTION dances: :D|-<\u0001');  }, 4000);
+            setTimeout(function() {
+                bot.say(to, '\u0001ACTION dances: :D\\-<\u0001');
+            }, 1000);
+            setTimeout(function() {
+                bot.say(to, '\u0001ACTION dances: :D|-<\u0001');
+            }, 2000);
+            setTimeout(function() {
+                bot.say(to, '\u0001ACTION dances: :D/-<\u0001');
+            }, 3000);
+            setTimeout(function() {
+                bot.say(to, '\u0001ACTION dances: :D|-<\u0001');
+            }, 4000);
         }
-    }
-    else {
+    } else {
         // private message
         console.log('private message');
     }

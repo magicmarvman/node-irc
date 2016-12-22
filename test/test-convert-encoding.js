@@ -1,8 +1,14 @@
+'use strict';
+
 var irc = require('../lib/irc');
 var test = require('tape');
 var testHelpers = require('./helpers');
 var checks = testHelpers.getFixtures('convert-encoding');
-var bindTo = { opt: { encoding: 'utf-8' } };
+var bindTo = {
+    opt: {
+        encoding: 'utf-8'
+    }
+};
 
 test('irc.Client.convertEncoding old', function(assert) {
     var convertEncoding = function(str) {

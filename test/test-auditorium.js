@@ -1,3 +1,5 @@
+'use strict';
+
 var net = require('net');
 
 var irc = require('../lib/irc');
@@ -7,7 +9,9 @@ var testHelpers = require('./helpers');
 
 test('user gets opped in auditorium', function(t) {
     var mock = testHelpers.MockIrcd();
-    var client = new irc.Client('localhost', 'testbot', {debug: true});
+    var client = new irc.Client('localhost', 'testbot', {
+        debug: true
+    });
 
     client.on('+mode', function(channel, by, mode, argument) {
         if (channel == '#auditorium' && argument == 'user') {

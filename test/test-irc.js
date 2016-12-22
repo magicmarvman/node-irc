@@ -1,3 +1,5 @@
+'use strict';
+
 var net = require('net');
 
 var irc = require('../lib/irc');
@@ -66,7 +68,7 @@ function runTests(t, isSecure, useSecureObject) {
     });
 }
 
-test ('splitting of long lines', function(t) {
+test('splitting of long lines', function(t) {
     var port = 6667;
     var mock = testHelpers.MockIrcd(port, 'utf-8', false);
     var client = new irc.Client('localhost', 'testbot', {
@@ -85,7 +87,7 @@ test ('splitting of long lines', function(t) {
     mock.close();
 });
 
-test ('splitting of long lines with no maxLength defined.', function(t) {
+test('splitting of long lines with no maxLength defined.', function(t) {
     var port = 6667;
     var mock = testHelpers.MockIrcd(port, 'utf-8', false);
     var client = new irc.Client('localhost', 'testbot', {
@@ -105,7 +107,7 @@ test ('splitting of long lines with no maxLength defined.', function(t) {
     mock.close();
 });
 
-test ('opt.messageSplit used when set', function(t) {
+test('opt.messageSplit used when set', function(t) {
     var port = 6667;
     var mock = testHelpers.MockIrcd(port, 'utf-8', false);
     var client = new irc.Client('localhost', 'testbot', {
