@@ -1,21 +1,21 @@
 [![Travis](https://img.shields.io/travis/funsocietyirc/node-irc.svg?style=flat)](https://travis-ci.org/funsocietyirc/node-irc)
-[![npm](https://img.shields.io/npm/v/funsocietyirc-client.svg?style=flat)](https://www.npmjs.com/package/irc)
+[![npm](https://img.shields.io/npm/v/funsocietyirc-client.svg?style=flat)](https://www.npmjs.com/package/funsocietyirc-client)
 [![Dependency Status](https://img.shields.io/david/funsocietyirc/node-irc.svg?style=flat)](https://david-dm.org/funsocietyirc/node-irc#info=Dependencies)
 [![devDependency Status](https://img.shields.io/david/dev/funsocietyirc/node-irc.svg?style=flat)](https://david-dm.org/funsocietyirc/node-irc#info=devDependencies)
 [![License](https://img.shields.io/badge/license-GPLv3-blue.svg?style=flat)](http://opensource.org/licenses/GPL-3.0)
-[![Join the chat at https://gitter.im/funsocietyirc/node-irc](https://badges.gitter.im/funsocietyirc/node-irc.svg)](https://gitter.im/funsocietyirc/node-irc?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/funsocietyirc/node-irc](https://badges.gitter.im/funsocietyirc/node-irc.svg)](https://gitter.im/funsocietyirc?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 
-[node-irc](http://node-irc.readthedocs.org/) is an IRC client library written in [JavaScript](http://en.wikipedia.org/wiki/JavaScript) for [Node](http://nodejs.org/).
+[funsocietyirc-client](http://funsocietyirc-client.readthedocs.org/) is an IRC client library written in [JavaScript](http://en.wikipedia.org/wiki/JavaScript) for [Node](http://nodejs.org/). It is a fork of the not so well maintained node-irc project.
 
-You can access more detailed documentation for this module at [Read the Docs](http://readthedocs.org/docs/node-irc/en/latest/)
+You can access more detailed documentation for this module at [Read the Docs](http://readthedocs.org/docs/funsocietyirc-client/en/latest/)
 
 ## Installation
 
 The easiest way to get it is via [npm](http://github.com/isaacs/npm):
 
 ```
-npm install irc
+npm install funsocietyirc-client
 ```
 
 If you want to run the latest version (i.e. later than the version available via
@@ -28,12 +28,12 @@ If you want to run the latest version (i.e. later than the version available via
 Of course, you can just clone this, and manually point at the library itself,
 but we really recommend using [npm](http://github.com/isaacs/npm)!
 
-Note that as of version 0.3.8, node-irc supports character set detection using
+Note that funsocietyirc-client supports character set detection using
 [icu](http://site.icu-project.org/). You'll need to install libiconv (if
 necessary; Linux systems tend to ship this in their glibc) and libicu (and its
 headers, if necessary, [install instructions](https://github.com/mooz/node-icu-charset-detector#installing-icu)) in order to use this feature. If you do not have these
 libraries or their headers installed, you will receive errors when trying to
-build these dependencies. However, node-irc will still install (assuming
+build these dependencies. However, funsocietyirc-client will still install (assuming
 nothing else failed) and you'll be able to use it, just not the character
 set features.
 
@@ -43,7 +43,7 @@ This library provides basic IRC client functionality. In the simplest case you
 can connect to an IRC server like so:
 
 ```js
-var irc = require('irc');
+var irc = require('funsocietyirc-client');
 var client = new irc.Client('irc.yourserver.com', 'myNick', {
     channels: ['#channel'],
 });
@@ -126,10 +126,10 @@ client.addListener('error', function(message) {
 ## Further Support
 
 Further documentation (including a complete API reference) is available in
-reStructuredText format in the docs/ folder of this project, or online at [Read the Docs](http://readthedocs.org/docs/node-irc/en/latest/).
+reStructuredText format in the docs/ folder of this project, or online at [Read the Docs](http://readthedocs.org/docs/funsocietyirc-client/en/latest/).
 
 If you find any issues with the documentation (or the module) please send a pull
 request or file an issue and we'll do our best to accommodate.
 
 You can also visit us on #mrnodebot on freenode to discuss issues you're having
-with the library, pull requests, or anything else related to node-irc.
+with the library, pull requests, or anything else related to funsocietyirc-client.
