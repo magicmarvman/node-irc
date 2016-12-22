@@ -1,3 +1,5 @@
+'use strict';
+
 /* Mock irc server */
 
 var path = require('path');

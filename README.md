@@ -1,15 +1,14 @@
-[![Travis](https://img.shields.io/travis/funsocietyirc/funsocietyirc-client.svg?style=flat)](https://travis-ci.org/funsocietyirc/funsocietyirc-client)
-[![npm](https://img.shields.io/npm/v/funsocietyirc/funsocietyirc-client.svg?style=flat)](https://www.npmjs.com/package/irc)
-[![Dependency Status](https://img.shields.io/david/funsocietyirc/funsocietyirc-client.svg?style=flat)](https://david-dm.org/funsocietyirc/funsocietyirc-client#info=Dependencies)
-[![devDependency Status](https://img.shields.io/david/dev/funsocietyirc/funsocietyirc-client.svg?style=flat)](https://david-dm.org/funsocietyirc/funsocietyirc-client#info=devDependencies)
+[![Travis](https://img.shields.io/travis/funsocietyirc/node-irc.svg?style=flat)](https://travis-ci.org/funsocietyirc/node-irc)
+[![npm](https://img.shields.io/npm/v/funsocietyirc-client.svg?style=flat)](https://www.npmjs.com/package/irc)
+[![Dependency Status](https://img.shields.io/david/funsocietyirc/node-irc.svg?style=flat)](https://david-dm.org/funsocietyirc/node-irc#info=Dependencies)
+[![devDependency Status](https://img.shields.io/david/dev/funsocietyirc/node-irc.svg?style=flat)](https://david-dm.org/funsocietyirc/node-irc#info=devDependencies)
 [![License](https://img.shields.io/badge/license-GPLv3-blue.svg?style=flat)](http://opensource.org/licenses/GPL-3.0)
-[![Join the chat at https://gitter.im/funsocietyirc/funsocietyirc-client](https://badges.gitter.im/funsocietyirc/funsocietyirc-client.svg)](https://gitter.im/funsocietyirc/funsocietyirc-client?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/funsocietyirc/node-irc](https://badges.gitter.im/funsocietyirc/node-irc.svg)](https://gitter.im/funsocietyirc/node-irc?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 
 [node-irc](http://node-irc.readthedocs.org/) is an IRC client library written in [JavaScript](http://en.wikipedia.org/wiki/JavaScript) for [Node](http://nodejs.org/).
 
 You can access more detailed documentation for this module at [Read the Docs](http://readthedocs.org/docs/node-irc/en/latest/)
-
 
 ## Installation
 
