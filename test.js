@@ -1,15 +1,16 @@
 #!/usr/bin/env node
 
-var irc  = require('./lib/irc.js');
-var util = require('util');
-var color = require('ansi-color').set;
+'use strict';
 
-var c = new irc.Client(
+const irc  = require('./lib/irc.js');
+const util = require('util');
+const color = require('ansi-color').set;
+
+const c = new irc.Client(
     'irc.dollyfish.net.nz',
-    'MrNodeBot',
+    'MrNodeBotTest',
     {
-        channels: ['#test'],
-        //debug: true
+        channels: ['#funsociety-irc'],
     }
 );
 
@@ -26,4 +27,3 @@ repl.inputStream.addListener('close', function() {
     console.log("\nClosing session");
     c.disconnect('Closing session');
 });
-

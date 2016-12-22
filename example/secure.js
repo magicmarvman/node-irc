@@ -1,21 +1,22 @@
 #!/usr/bin/env node
+
 'use strict';
 
-var irc = require('../');
+const irc = require('../');
 /*
 * To set the key/cert explicitly, you could do the following
-var fs = require('fs');
+const fs = require('fs');
 
-var options = {
+const options = {
   key: fs.readFileSync('privkey.pem'),
   cert: fs.readFileSync('certificate.crt')
 };
 */
 
 // Or to just use defaults
-var options = true;
+const options = true;
 
-var bot = new irc.Client('chat.us.freenode.net', 'MrNodeBot', {
+const bot = new irc.Client('chat.us.freenode.net', 'MrNodeBotTest', {
     port: 6697,
     debug: true,
     secure: options,

@@ -13,11 +13,9 @@ test('various origins and types of chanmodes get handled correctly', function(t)
 
     var count = 0;
     client.on('+mode', function() {
-        //console.log(client.chans['#channel']);
         t.deepEqual(client.chans['#channel'], expected[count++]);
     });
     client.on('-mode', function() {
-        //console.log(client.chans['#channel']);
         t.deepEqual(client.chans['#channel'], expected[count++]);
     });
 

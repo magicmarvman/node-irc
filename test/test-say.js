@@ -17,8 +17,8 @@ test('various ways to client.say', function(t) {
     };
 
     /* traditional channel message */
-    client.say('#chan', "I'm a bot!");
-    t.deepEqual(args[0], ['PRIVMSG', '#chan', "I'm a bot!"]);
+    client.say('#chan', 'I\'m a bot!');
+    t.deepEqual(args[0], ['PRIVMSG', '#chan', 'I\'m a bot!']);
     args = []; /* reset after every test */
 
     /* privmsg user */

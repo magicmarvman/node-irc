@@ -21,9 +21,8 @@ test('irc.Client.convertEncoding old', function(assert) {
             var to = new Iconv(charset, self.opt.encoding);
 
             return to.convert(str);
-        } else {
-            return str;
         }
+        return str;
     }.bind(bindTo);
 
     checks.causesException.forEach(function iterate(line) {

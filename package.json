@@ -1,11 +1,11 @@
 {
   "name": "funsocietyirc-client",
-  "description": "An ehanced IRC client library for node",
+  "description": "An ehanced IRC client library for node, forked from node-irc",
   "version": "0.0.6",
   "author": "Dave Richer <dave@develops.io>",
   "scripts": {
     "test": "./node_modules/faucet/bin/cmd.js test/test-*.js",
-    "lint": "./node_modules/jscs/bin/jscs --preset=airbnb */*.js"
+    "lint": "./node_modules/jscs/bin/jscs --preset=node-style-guide */*.js"
   },
   "contributors": [
     "Martyn Smith <martyn@dollyfish.net.nz>",

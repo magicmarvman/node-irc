@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 
-var irc = require('../');
+'use strict';
 
-var bot = new irc.Client('irc.dollyfish.net.nz', 'MrNodeBot', {
+const irc = require('../');
+
+const bot = new irc.Client('irc.dollyfish.net.nz', 'MrNodeBotTest', {
     debug: true,
     channels: ['#test', '#othertest']
 });

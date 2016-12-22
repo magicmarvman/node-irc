@@ -3,5 +3,9 @@
   "disallowMultipleVarDecl": null,
   "requireMultipleVarDecl": null,
   "requireCamelCaseOrUpperCaseIdentifiers": "ignoreProperties",
-  "safeContextKeyword": "self"
+  "safeContextKeyword": "self",
+  "requireCurlyBraces": false,
+  "maximumLineLength": 160,
+  "requireCapitalizedComments": false,
+  "requireTrailingComma": false
 }
