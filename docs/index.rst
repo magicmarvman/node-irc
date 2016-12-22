@@ -1,4 +1,4 @@
-Welcome to node-irc's documentation!
+Welcome to funsocietyirc-client's documentation!
 ====================================
 
 .. include:: ../README.rst
@@ -10,4 +10,3 @@ More detailed docs:
    :maxdepth: 2
 
    API
-

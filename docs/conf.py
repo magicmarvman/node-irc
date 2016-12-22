@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# node-irc documentation build configuration file, created by
+# funsocietyirc-client documentation build configuration file, created by
 # sphinx-quickstart on Sat Oct  1 00:02:31 2011.
 #
 # This file is execfile()d with the current directory set to its containing dir.
@@ -40,8 +40,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'node-irc'
-copyright = u'2011, Martyn Smith'
+project = u'funsocietyirc-client'
+copyright = u'2016, Dave Richer'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -164,7 +164,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'node-ircdoc'
+htmlhelp_basename = 'funsociety-irc-clientdoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -178,8 +178,8 @@ htmlhelp_basename = 'node-ircdoc'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'node-irc.tex', u'node-irc Documentation',
-   u'Martyn Smith', 'manual'),
+  ('index', 'funsocietyirc-client.tex', u'funsociety-ircclient Documentation',
+   u'Dave Richer', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -211,6 +211,6 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'node-irc', u'node-irc Documentation',
-     [u'Martyn Smith'], 1)
+    ('index', 'funsocietyirc-client', u'funsocietyirc-client Documentation',
+     [u'Dave Richer'], 1)
 ]

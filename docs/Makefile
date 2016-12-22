@@ -72,17 +72,17 @@ qthelp:
 	@echo
 	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
 	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
-	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/node-irc.qhcp"
+	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/funsocietyirc-client.qhcp"
 	@echo "To view the help file:"
-	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/node-irc.qhc"
+	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/funsocietyirc-client.qhc"
 
 devhelp:
 	$(SPHINXBUILD) -b devhelp $(ALLSPHINXOPTS) $(BUILDDIR)/devhelp
 	@echo
 	@echo "Build finished."
 	@echo "To view the help file:"
-	@echo "# mkdir -p $$HOME/.local/share/devhelp/node-irc"
-	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/node-irc"
+	@echo "# mkdir -p $$HOME/.local/share/devhelp/funsocietyirc-client"
+	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/funsocietyirc-client"
 	@echo "# devhelp"
 
 epub:
