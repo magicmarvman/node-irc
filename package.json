@@ -1,7 +1,7 @@
 {
   "name": "funsocietyirc-client",
   "description": "An ehanced IRC client library for node, forked from node-irc",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "author": "Dave Richer <dave@davericher@gmail.com>",
   "scripts": {
     "test": "./node_modules/faucet/bin/cmd.js test/test-*.js",
