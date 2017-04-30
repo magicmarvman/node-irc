@@ -2,7 +2,7 @@
   "name": "funsocietyirc-client",
   "description": "An ehanced IRC client library for node, forked from node-irc",
   "version": "0.0.11",
-  "author": "Dave Richer <dave@develops.io>",
+  "author": "Dave Richer <dave@davericher@gmail.com>",
   "scripts": {
     "test": "./node_modules/faucet/bin/cmd.js test/test-*.js",
     "lint": "./node_modules/jscs/bin/jscs --preset=node-style-guide */*.js"
@@ -17,7 +17,8 @@
     "Henri Niemeläinen <aivot-on@iki.fi>",
     "Alex Miles <ghostaldev@gmail.com>",
     "Simmo Saan <simmo.saan@gmail.com>",
-    "Blay <blay09@hotmail.de>"
+    "Blay <blay09@hotmail.de>",
+    "Dave Richer <davericher@gmail.com>"
   ],
   "repository": {
     "type": "git",
@@ -29,8 +30,8 @@
   },
   "main": "lib/irc",
   "engines": {
-    "node": ">=6.0.0",
-    "npm": ">=4.0.0"
+    "node": ">=7.0.0",
+    "npm": ">=4.2.0"
   },
   "license": "GPL-3.0",
   "tonicExample": "const ircClient = require('funsocietyirc-client')",
