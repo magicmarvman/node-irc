@@ -18,6 +18,7 @@ Client
         {
             userName: 'MrNodeBot',
             realName: 'MrNodeBot IRC Bot',
+            socket: false,
             port: 6667,
             localAddress: null,
             localPort: null,
@@ -44,6 +45,8 @@ Client
     returned from `crypto.createCredentials()`) specifying cert etc for validation.
     If you set `selfSigned` to true SSL accepts certificates from a non trusted CA.
     If you set `certExpired` to true, the bot connects even if the ssl cert has expired.
+
+    Set `socket` to true to interpret `server` as a path to a UNIX domain socket.
 
     `localAddress` is the local address to bind to when connecting, such as `127.0.0.1`
 
