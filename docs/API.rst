@@ -201,6 +201,24 @@ Events
     Emitted when the server sends the initial 001 line, indicating you've connected
     to the server. See the `raw` event for details on the `message` object.
 
+.. js:data:: 'connectionEnd'
+
+    `function () { }`
+
+    Emitted when the server connection is lost.
+
+.. js:data:: 'netError'
+
+    `function (exception) { }`
+
+    Emitted when the underlying scoket fires an error.
+
+.. js:data:: 'abort'
+
+    `function (retryCount) { }`
+
+    Emitted when the server loses connection and attempts auto reconnection.
+
 .. js:data:: 'motd'
 
     `function (motd) { }`
@@ -479,6 +497,13 @@ Events
     `function (message) { }`
 
     Emitted when ever the server responds with an error-type message. The message
+    parameter is exactly as in the 'raw' event.
+
+.. js:data:: 'unhandled'
+
+    `function (message) { }`
+
+    Emitted when ever the server responds with an unhandled error. The message
     parameter is exactly as in the 'raw' event.
 
 .. js:data:: 'action'
