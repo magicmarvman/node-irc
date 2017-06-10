@@ -40,7 +40,7 @@
     "lodash": "^4.17.4"
   },
   "optionalDependencies": {
-    "iconv": "^2.2.1",
+    "iconv": "^2.2.3",
     "node-icu-charset-detector": "^0.2.0"
   },
   "devDependencies": {

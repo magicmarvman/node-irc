@@ -311,9 +311,9 @@ i@0.3.x:
   version "0.3.5"
   resolved "https://registry.yarnpkg.com/i/-/i-0.3.5.tgz#1d2b854158ec8169113c6cb7f6b6801e99e211d5"
 
-iconv@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/iconv/-/iconv-2.2.1.tgz#39b13fdd98987d26aef26c0a2f2a900911fa4584"
+iconv@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/iconv/-/iconv-2.2.3.tgz#e084d60eeb7d73da7f0a9c096e4c8abe090bfaed"
   dependencies:
     nan "^2.3.5"
 
