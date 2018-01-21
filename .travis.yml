@@ -1,4 +1,6 @@
 language: node_js
+env:
+  - CXX=g++=4.8
 node_js:
   - "6"
   - "7"
@@ -10,3 +12,9 @@ script:
   - "npm test"
 notifications:
   irc: "chat.freenode.net#mrnodebot"
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
