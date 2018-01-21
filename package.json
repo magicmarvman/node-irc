@@ -5,7 +5,8 @@
   "author": "Dave Richer <dave@davericher@gmail.com>",
   "scripts": {
     "test": "./node_modules/faucet/bin/cmd.js test/test-*.js",
-    "lint": "./node_modules/jscs/bin/jscs --preset=node-style-guide */*.js"
+    "lint": "./node_modules/jscs/bin/jscs --preset=node-style-guide */*.js",
+    "lint-fix": "./node_modules/jscs/bin/jscs --preset=node-style-guide */*.js --fix"
   },
   "contributors": [
     "Martyn Smith <martyn@dollyfish.net.nz>",

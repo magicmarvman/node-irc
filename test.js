@@ -24,6 +24,6 @@ repl.context.irc = irc;
 repl.context.c = c;
 
 repl.inputStream.addListener('close', function() {
-    console.log("\nClosing session");
+    console.log('\nClosing session');
     c.disconnect('Closing session');
 });
