@@ -10,7 +10,7 @@ const util = require('util');
 const EventEmitter = require('events').EventEmitter;
 const os = require('os');
 
-const MockIrcd = function (port, encoding, isSecure) {
+const MockIrcd = function(port, encoding, isSecure) {
     const self = this;
     let connectionClass;
     let options = {};
@@ -32,20 +32,20 @@ const MockIrcd = function (port, encoding, isSecure) {
     this.incoming = [];
     this.outgoing = [];
 
-    this.server = connectionClass.createServer(options, function (c) {
-        c.on('data', function (data) {
-            const msg = data.toString(self.encoding).split('\r\n').filter(function (m) {
+    this.server = connectionClass.createServer(options, function(c) {
+        c.on('data', function(data) {
+            const msg = data.toString(self.encoding).split('\r\n').filter(function(m) {
                 return m;
             });
             self.incoming = self.incoming.concat(msg);
         });
 
-        self.on('send', function (data) {
+        self.on('send', function(data) {
             self.outgoing.push(data);
             c.write(data);
         });
 
-        c.on('end', function () {
+        c.on('end', function() {
             self.emit('end');
         });
     });
@@ -75,7 +75,7 @@ module.exports.getTempSocket = function() {
         // ignore
     }
     return sockPath;
-}
+};
 
 const fixtures = require('./data/fixtures');
 module.exports.getFixtures = function(testSuite) {

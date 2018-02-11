@@ -122,7 +122,7 @@ test('opt.messageSplit used when set', function(t) {
         client._splitLongLines = function(words, maxLength, destination) {
             t.equal(maxLength, item.expected);
             return [words];
-        }
+        };
         client._speak('kind', 'target', 'test message');
     });
 

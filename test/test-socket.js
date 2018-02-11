@@ -27,7 +27,7 @@ test('connect and quit socket with message', function(t) {
     mock.on('end', function() {
         const msgs = mock.getIncomingMsgs();
 
-        t.equal(msgs.length, expected.sent.length, 'Server received the correct amount of messages.')
+        t.equal(msgs.length, expected.sent.length, 'Server received the correct amount of messages.');
 
         for (let i = 0; i < msgs.length; i++) {
             t.equal(msgs[i], expected.sent[i][0], expected.sent[i][1]);

@@ -18,7 +18,7 @@ test('connect and sets hostmask when nick in use', function(t) {
     t.plan(expected.sent.length + expected.received.length + expected.clientInfo.length);
 
     mock.server.on('connection', function() {
-        mock.send(':localhost 433 * testbot :Nickname is already in use.\r\n')
+        mock.send(':localhost 433 * testbot :Nickname is already in use.\r\n');
         mock.send(':localhost 001 testbot1 :Welcome to the Internet Relay Chat Network testbot\r\n');
     });
 
