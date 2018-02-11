@@ -1,19 +1,19 @@
 'use strict';
 
-var net = require('net');
+const net = require('net');
 
-var irc = require('../lib/irc');
-var test = require('tape');
+const irc = require('../lib/irc');
+const test = require('tape');
 
-var testHelpers = require('./helpers');
+const testHelpers = require('./helpers');
 
 test('sent messages ending with double CRLF', function(t) {
-    var mock = testHelpers.MockIrcd();
-    var client = new irc.Client('localhost', 'testbot', {
+    const mock = testHelpers.MockIrcd();
+    const client = new irc.Client('localhost', 'testbot', {
         debug: true
     });
 
-    var expected = testHelpers.getFixtures('double-CRLF');
+    const expected = testHelpers.getFixtures('double-CRLF');
 
     t.plan(expected.sent.length + expected.received.length);
 
@@ -27,9 +27,9 @@ test('sent messages ending with double CRLF', function(t) {
     });
 
     mock.on('end', function() {
-        var msgs = mock.getIncomingMsgs();
+        const msgs = mock.getIncomingMsgs();
 
-        for (var i = 0; i < msgs.length; i++) {
+        for (let i = 0; i < msgs.length; i++) {
             t.equal(msgs[i], expected.sent[i][0], expected.sent[i][1]);
         }
         mock.close();

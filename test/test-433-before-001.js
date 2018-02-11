@@ -1,12 +1,12 @@
 'use strict';
 
-var irc = require('../lib/irc');
-var test = require('tape');
+const irc = require('../lib/irc');
+const test = require('tape');
 
-var testHelpers = require('./helpers');
+const testHelpers = require('./helpers');
 
 test('connect and sets hostmask when nick in use', function(t) {
-    var client, mock, expected;
+    let client, mock, expected;
 
     mock = testHelpers.MockIrcd();
     client = new irc.Client('localhost', 'testbot', {
@@ -33,9 +33,9 @@ test('connect and sets hostmask when nick in use', function(t) {
     });
 
     mock.on('end', function() {
-        var msgs = mock.getIncomingMsgs();
+        const msgs = mock.getIncomingMsgs();
 
-        for (var i = 0; i < msgs.length; i++) {
+        for (let i = 0; i < msgs.length; i++) {
             t.equal(msgs[i], expected.sent[i][0], expected.sent[i][1]);
         }
         mock.close();

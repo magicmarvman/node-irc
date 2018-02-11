@@ -2,18 +2,18 @@
 
 /* Mock irc server */
 
-var path = require('path');
-var fs = require('fs');
-var net = require('net');
-var tls = require('tls');
-var util = require('util');
-var EventEmitter = require('events').EventEmitter;
-var os = require('os');
+const path = require('path');
+const fs = require('fs');
+const net = require('net');
+const tls = require('tls');
+const util = require('util');
+const EventEmitter = require('events').EventEmitter;
+const os = require('os');
 
-var MockIrcd = function(port, encoding, isSecure) {
-    var self = this;
-    var connectionClass;
-    var options = {};
+const MockIrcd = function (port, encoding, isSecure) {
+    const self = this;
+    let connectionClass;
+    let options = {};
 
     if (isSecure) {
         connectionClass = tls;
@@ -26,26 +26,26 @@ var MockIrcd = function(port, encoding, isSecure) {
     }
 
     this.port = port || (isSecure
-      ? 6697
-      : 6667);
+        ? 6697
+        : 6667);
     this.encoding = encoding || 'utf-8';
     this.incoming = [];
     this.outgoing = [];
 
-    this.server = connectionClass.createServer(options, function(c) {
-        c.on('data', function(data) {
-            var msg = data.toString(self.encoding).split('\r\n').filter(function(m) {
+    this.server = connectionClass.createServer(options, function (c) {
+        c.on('data', function (data) {
+            const msg = data.toString(self.encoding).split('\r\n').filter(function (m) {
                 return m;
             });
             self.incoming = self.incoming.concat(msg);
         });
 
-        self.on('send', function(data) {
+        self.on('send', function (data) {
             self.outgoing.push(data);
             c.write(data);
         });
 
-        c.on('end', function() {
+        c.on('end', function () {
             self.emit('end');
         });
     });
@@ -67,8 +67,8 @@ MockIrcd.prototype.getIncomingMsgs = function() {
 };
 
 module.exports.getTempSocket = function() {
-    var tempDir = os.tmpdir();
-    var sockPath = path.join(tempDir, 'mock_ircd.sock');
+    const tempDir = os.tmpdir();
+    const sockPath = path.join(tempDir, 'mock_ircd.sock');
     try {
         fs.unlinkSync(sockPath);
     } catch (e) {
@@ -77,7 +77,7 @@ module.exports.getTempSocket = function() {
     return sockPath;
 }
 
-var fixtures = require('./data/fixtures');
+const fixtures = require('./data/fixtures');
 module.exports.getFixtures = function(testSuite) {
     return fixtures[testSuite];
 };

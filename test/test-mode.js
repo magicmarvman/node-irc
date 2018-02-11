@@ -1,25 +1,17 @@
 'use strict';
 
-var irc = require('../lib/irc');
-var test = require('tape');
+const irc = require('../lib/irc');
+const test = require('tape');
 
-var testHelpers = require('./helpers');
+const testHelpers = require('./helpers');
 
 test('various origins and types of chanmodes get handled correctly', function(t) {
-    var mock = testHelpers.MockIrcd();
-    var client = new irc.Client('localhost', 'testbot', {
+    const mock = testHelpers.MockIrcd();
+    const client = new irc.Client('localhost', 'testbot', {
         debug: true
     });
-
-    var count = 0;
-    client.on('+mode', function() {
-        t.deepEqual(client.chans['#channel'], expected[count++]);
-    });
-    client.on('-mode', function() {
-        t.deepEqual(client.chans['#channel'], expected[count++]);
-    });
-
-    var expected = [{
+    let count = 0;
+    const expected = [{
         key: '#channel',
         serverName: '#channel',
         users: {},
@@ -244,6 +236,14 @@ test('various origins and types of chanmodes get handled correctly', function(t)
             t: []
         }
     }];
+
+    client.on('+mode', function() {
+        t.deepEqual(client.chans['#channel'], expected[count++]);
+    });
+
+    client.on('-mode', function() {
+        t.deepEqual(client.chans['#channel'], expected[count++]);
+    });
 
     mock.server.on('connection', function() {
         mock.send(':localhost 001 testbot :Welcome!\r\n');

@@ -1,11 +1,11 @@
 'use strict';
 
-var irc = require('../lib/irc');
-var test = require('tape');
-var args = [];
+const irc = require('../lib/irc');
+const test = require('tape');
+let args = [];
 
 test('various ways to client.say', function(t) {
-    var client = new irc.Client('localhost', 'testbot', {
+    const client = new irc.Client('localhost', 'testbot', {
         channels: ['#chan', '#yourchan'],
         retryCount: 0,
         debug: true

@@ -17,7 +17,7 @@ const c = new irc.Client(
 c.addListener('raw', function(message) { console.log('raw: ', message) });
 c.addListener('error', function(message) { console.log(color('error: ', 'red'), message) });
 
-var repl = require('repl').start('> ');
+const repl = require('repl').start('> ');
 repl.context.repl = repl;
 repl.context.util = util;
 repl.context.irc = irc;

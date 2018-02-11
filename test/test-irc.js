@@ -1,14 +1,14 @@
 'use strict';
 
-var net = require('net');
+const net = require('net');
 
-var irc = require('../lib/irc');
-var test = require('tape');
+const irc = require('../lib/irc');
+const test = require('tape');
 
-var testHelpers = require('./helpers');
+const testHelpers = require('./helpers');
 
-var expected = testHelpers.getFixtures('basic');
-var greeting = ':localhost 001 testbot :Welcome to the Internet Relay Chat Network testbot\r\n';
+const expected = testHelpers.getFixtures('basic');
+const greeting = ':localhost 001 testbot :Welcome to the Internet Relay Chat Network testbot\r\n';
 
 test('connect, register and quit', function(t) {
     runTests(t, false, false);
@@ -23,11 +23,10 @@ test('connect, register and quit, securely, with secure object', function(t) {
 });
 
 function runTests(t, isSecure, useSecureObject) {
-    var port = isSecure ? 6697 : 6667;
-    var mock = testHelpers.MockIrcd(port, 'utf-8', isSecure);
-    var client;
-    if (isSecure && useSecureObject) {
-        client = new irc.Client('notlocalhost', 'testbot', {
+    const port = isSecure ? 6697 : 6667;
+    const mock = testHelpers.MockIrcd(port, 'utf-8', isSecure);
+    const client = (isSecure && useSecureObject) ?
+        new irc.Client('notlocalhost', 'testbot', {
             secure: {
                 host: 'localhost',
                 port: port,
@@ -36,16 +35,13 @@ function runTests(t, isSecure, useSecureObject) {
             selfSigned: true,
             retryCount: 0,
             debug: true
-        });
-    } else {
-        var client = new irc.Client('localhost', 'testbot', {
+        }) : new irc.Client('localhost', 'testbot', {
             secure: isSecure,
             selfSigned: true,
             port: port,
             retryCount: 0,
             debug: true
         });
-    }
 
     t.plan(expected.sent.length + expected.received.length);
 
@@ -59,9 +55,9 @@ function runTests(t, isSecure, useSecureObject) {
     });
 
     mock.on('end', function() {
-        var msgs = mock.getIncomingMsgs();
+        const msgs = mock.getIncomingMsgs();
 
-        for (var i = 0; i < msgs.length; i++) {
+        for (let i = 0; i < msgs.length; i++) {
             t.equal(msgs[i], expected.sent[i][0], expected.sent[i][1]);
         }
         mock.close();
@@ -69,9 +65,9 @@ function runTests(t, isSecure, useSecureObject) {
 }
 
 test('splitting of long lines', function(t) {
-    var port = 6667;
-    var mock = testHelpers.MockIrcd(port, 'utf-8', false);
-    var client = new irc.Client('localhost', 'testbot', {
+    const port = 6667;
+    const mock = testHelpers.MockIrcd(port, 'utf-8', false);
+    const client = new irc.Client('localhost', 'testbot', {
         secure: false,
         selfSigned: true,
         port: port,
@@ -79,7 +75,7 @@ test('splitting of long lines', function(t) {
         debug: true
     });
 
-    var group = testHelpers.getFixtures('_splitLongLines');
+    const group = testHelpers.getFixtures('_splitLongLines');
     t.plan(group.length);
     group.forEach(function(item) {
         t.deepEqual(client._splitLongLines(item.input, item.maxLength, []), item.result);
@@ -88,9 +84,9 @@ test('splitting of long lines', function(t) {
 });
 
 test('splitting of long lines with no maxLength defined.', function(t) {
-    var port = 6667;
-    var mock = testHelpers.MockIrcd(port, 'utf-8', false);
-    var client = new irc.Client('localhost', 'testbot', {
+    const port = 6667;
+    const mock = testHelpers.MockIrcd(port, 'utf-8', false);
+    const client = new irc.Client('localhost', 'testbot', {
         secure: false,
         selfSigned: true,
         port: port,
@@ -98,7 +94,7 @@ test('splitting of long lines with no maxLength defined.', function(t) {
         debug: true
     });
 
-    var group = testHelpers.getFixtures('_splitLongLines_no_max');
+    const group = testHelpers.getFixtures('_splitLongLines_no_max');
     console.log(group.length);
     t.plan(group.length);
     group.forEach(function(item) {
@@ -108,9 +104,9 @@ test('splitting of long lines with no maxLength defined.', function(t) {
 });
 
 test('opt.messageSplit used when set', function(t) {
-    var port = 6667;
-    var mock = testHelpers.MockIrcd(port, 'utf-8', false);
-    var client = new irc.Client('localhost', 'testbot', {
+    const port = 6667;
+    const mock = testHelpers.MockIrcd(port, 'utf-8', false);
+    const client = new irc.Client('localhost', 'testbot', {
         secure: false,
         selfSigned: true,
         port: port,
@@ -119,7 +115,7 @@ test('opt.messageSplit used when set', function(t) {
         messageSplit: 10
     });
 
-    var group = testHelpers.getFixtures('_speak');
+    const group = testHelpers.getFixtures('_speak');
     t.plan(group.length);
     group.forEach(function(item) {
         client.maxLineLength = item.length;

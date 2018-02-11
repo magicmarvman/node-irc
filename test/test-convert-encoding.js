@@ -1,20 +1,20 @@
 'use strict';
 
-var irc = require('../lib/irc');
-var test = require('tape');
-var testHelpers = require('./helpers');
-var checks = testHelpers.getFixtures('convert-encoding');
-var bindTo = {
+const irc = require('../lib/irc');
+const test = require('tape');
+const testHelpers = require('./helpers');
+const checks = testHelpers.getFixtures('convert-encoding');
+const bindTo = {
     opt: {
         encoding: 'utf-8'
     }
 };
 
 test('irc.Client.convertEncoding', function(assert) {
-    var convertEncoding = irc.Client.prototype.convertEncoding.bind(bindTo);
+    const convertEncoding = irc.Client.prototype.convertEncoding.bind(bindTo);
 
     checks.causesException.forEach(function iterate(line) {
-        var causedException = false;
+        let causedException = false;
 
         try {
             convertEncoding(line);
