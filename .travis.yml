@@ -4,11 +4,11 @@ env:
 node_js:
   - "8"
   - "9"
+  - "10"
 before_install:
-  - npm install -g npm
+  - yarn global add npm
 script:
-  - "npm run-script lint"
-  - "npm test"
+  - "yarn run test"
 notifications:
   irc: "chat.freenode.net#mrnodebot"
 addons:
