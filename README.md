@@ -1,32 +1,31 @@
-[![Travis](https://img.shields.io/travis/funsocietyirc/node-irc.svg?style=flat)](https://travis-ci.org/funsocietyirc/node-irc)
-[![npm](https://img.shields.io/npm/v/funsocietyirc-client.svg?style=flat)](https://www.npmjs.com/package/funsocietyirc-client)
-[![Dependency Status](https://img.shields.io/david/funsocietyirc/node-irc.svg?style=flat)](https://david-dm.org/funsocietyirc/node-irc#info=Dependencies)
-[![devDependency Status](https://img.shields.io/david/dev/funsocietyirc/node-irc.svg?style=flat)](https://david-dm.org/funsocietyirc/node-irc#info=devDependencies)
-[![License](https://img.shields.io/badge/license-GPLv3-blue.svg?style=flat)](http://opensource.org/licenses/GPL-3.0)
-[![Join the chat at https://gitter.im/funsocietyirc/node-irc](https://badges.gitter.im/funsocietyirc/node-irc.svg)](https://gitter.im/funsocietyirc?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Travis](https://img.shields.io/travis/MagicMarvMan/node-irc.svg?style=flat)](https://travis-ci.org/MagicMarvMan/node-irc)
+[![npm](https://img.shields.io/npm/v/protonirc.svg?style=flat)](https://www.npmjs.com/package/protonirc)
+[![Dependency Status](https://img.shields.io/david/MagicMarvMan/node-irc.svg?style=flat)](https://david-dm.org/MagicMarvMan/node-irc#info=Dependencies)
+[![devDependency Status](https://img.shields.io/david/dev/MagicMarvMan/node-irc.svg?style=flat)](https://david-dm.org/MagicMarvMan/node-irc#info=devDependencies)
+[![License](https://img.shields.io/badge/license-AGPLv3-blue.svg?style=flat)](http://opensource.org/licenses/AGPL-3.0)
 
 
-[funsocietyirc-client](http://funsocietyirc-client.readthedocs.org/) is an IRC client library written in [JavaScript](http://en.wikipedia.org/wiki/JavaScript) for [Node](http://nodejs.org/). It is a fork of the not so well maintained node-irc project.
+[protonirc](http://funsocietyirc-client.readthedocs.org/) is an IRC client library written in [JavaScript](http://en.wikipedia.org/wiki/JavaScript) for [Node](http://nodejs.org/). It is a fork of the not so well maintained node-irc project.
 
 You can access more detailed documentation for this module at [Read the Docs](http://readthedocs.org/docs/funsocietyirc-client/en/latest/)
 
 ## Installation
 
-The easiest way to get it is via [npm](http://github.com/isaacs/npm):
+The easiest way to get it is via [yarn](https://yarnpkg.org):
 
 ```
-npm install funsocietyirc-client
+yarn add protonircc
 ```
 
 If you want to run the latest version (i.e. later than the version available via
-[npm](http://github.com/isaacs/npm)) you can clone this repo, then use [npm](http://github.com/isaacs/npm) to link-install it:
+[yarn](https://yarnpkg.org)) you can clone this repo, then use [yarn](https://yarnpkg.org) to link-install it:
 
 ```
-    npm link /path/to/your/clone
+    yarn link /path/to/your/clone
 ```
 
 Of course, you can just clone this, and manually point at the library itself,
-but we really recommend using [npm](http://github.com/isaacs/npm)!
+but we really recommend using [yarn](https://yarnpkg.org)!
 
 ## Basic Usage
 
