@@ -1,5 +1,5 @@
 {
-  "name": "funsocietyirc-client",
+  "name": "protonirc",
   "description": "An ehanced IRC client library for node, forked from node-irc",
   "version": "0.1.14",
   "author": "Dave Richer <dave@davericher@gmail.com>",
@@ -23,11 +23,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/funsocietyirc/node-irc"
+    "url": "https://github.com/MagicMarvMan/node-irc"
   },
   "bugs": {
-    "mail": "davericher@gmail.com",
-    "url": "https://github.com/funsocietyirc/node-irc/issues"
+    "url": "https://github.com/MagicMarvMan/node-irc/issues"
   },
   "main": "lib/irc",
   "engines": {
@@ -37,15 +36,15 @@
   "license": "GPL-3.0",
   "tonicExample": "const ircClient = require('funsocietyirc-client')",
   "dependencies": {
-    "iconv-lite": "^0.4.23",
-    "irc-colors": "^1.4.2",
+    "iconv-lite": "0.4.23",
+    "irc-colors": "1.4.2",
     "jschardet": "https://github.com/dfoody/jschardet.git",
-    "lodash": "^4.17.10"
+    "lodash": "4.17.10"
   },
   "devDependencies": {
-    "ansi-color": "^0.2.1",
+    "ansi-color": "0.2.1",
     "faucet": "0.0.1",
-    "jscs": "^3.0.7",
-    "tape": "^4.9.0"
+    "jscs": "3.0.7",
+    "tape": "4.9.0"
   }
 }
