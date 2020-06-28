@@ -36,7 +36,7 @@
   "license": "GPL-3.0",
   "tonicExample": "const ircClient = require('funsocietyirc-client')",
   "dependencies": {
-    "iconv-lite": "0.4.23",
+    "iconv-lite": "0.6.1",
     "irc-colors": "1.4.3",
     "jschardet": "https://github.com/dfoody/jschardet.git",
     "lodash": "4.17.11"
