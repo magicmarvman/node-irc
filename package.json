@@ -39,7 +39,7 @@
     "iconv-lite": "0.4.23",
     "irc-colors": "1.4.3",
     "jschardet": "https://github.com/dfoody/jschardet.git",
-    "lodash": "4.17.11"
+    "lodash": "4.17.19"
   },
   "devDependencies": {
     "ansi-color": "0.2.1",
